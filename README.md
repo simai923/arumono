@@ -1,24 +1,42 @@
-# README
+# arumono
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリケーションの概要
+家にある食材や調味量を簡単に管理することができるアプリケーションです。  家に「あるもの」が一覧で見ることができるので、余分な買い物や買い忘れを防ぐことが出来ます。また、賞味期限も一覧表示されるので、「いつの間にか期限が過ぎていた・・・」といったことも防ぐことが出来ます。
 
-Things you may want to cover:
+### URL
+[arumono]()
 
-* Ruby version
+## 利用方法
+1. トップページの『あるもの追加』から食材登録ページへ移動します。
+2. 家にある食材や調味料などの「名前」「数量・単位」「賞味（消費）期限」を登録し、『保存』します。
+3. 一覧ページに保存されました！
+4. 使った食材は『編集』や『削除』ボタンで数量を変更します。
 
-* System dependencies
 
-* Configuration
+## 作成の背景
+日頃の「もったいない」を解決すべくこのアプリケーションを開発いたしました。  特に1人暮らしや料理に慣れていない方の中には、「買い物に行ったけどまだ残っている食材を買ってきてしまった。」「冷蔵庫の奥にしまいっぱなしで賞味期限が切れてしまった。」など様々な「もったいない」を実際に経験したことがあるのではないでしょうか？  そこで、家にあるものやその賞味期限を簡単に管理したい、という思いを形にしました。
 
-* Database creation
+## 要件定義
+|機能         | 目的                         |
+|----------- | ---------------------------- |
+| 食材登録機能 | 食材の数量や期限を登録する       |
+| 編集機能    | 食材の数量の調整、削除を行う      |
 
-* Database initialization
 
-* How to run the test suite
+## 実装予定機能
+機能          | 目的                         |
+|----------- | ---------------------------- |
+| 買い物リスト | 買い物リストを作成する。         |
+| 通知機能    | 賞味期限の近いものがあれば通知する |
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+# データベース設計
+## foodstuff テーブル
+
+| Column      | Type    | Options     |
+| ----------- | ------- | ----------- |
+| name        | string  | null: false |
+| amount      | integer | null: false |
+| unit_id     | integer | null: false |
+| limit       | date    |             |
