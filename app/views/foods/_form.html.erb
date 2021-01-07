@@ -1,4 +1,5 @@
 <%= form_with model: food, local: true, class: "food_form" do |f| %>
+<%= render 'layouts/error_messages', model: f.object %>
 <div class="field">
   <%= f.label :食材 %><br>
   <%= f.text_field :name %>
