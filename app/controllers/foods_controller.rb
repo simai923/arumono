@@ -16,6 +16,19 @@ class FoodsController < ApplicationController
     end
   end
 
+  def edit
+    @food = Food.find(params[:id])
+  end
+
+  def update
+    @food = Food.find(params[:id])
+    if @food.update(food_params) 
+      redirect_to foods_path
+    else
+      render 'edit'
+    end
+  end
+
   private
   def food_params
     params.require(:food).permit(:name, :amount, :unit_id, :limit)
