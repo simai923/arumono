@@ -4,7 +4,7 @@
   <div class="container">
     <h1 class="display-2">arumono</h1>
     <p class="lead">This is an application that manages ingredients and seasonings.</p>
-    <a class="btn btn-info btn-lg" href="#" role="button">あるもの</a>
+    <%= link_to "あるもの", foods_path, class: "btn btn-info btn-lg" %>
   </div>
 </div>
 
@@ -13,17 +13,17 @@
       <div class="col-md-4">
         <h2>登録する</h2>
         <p>Register the ingredients and seasonings you have at home. Then, the list will be displayed in the order of the earliest expiration date.</p>
-        <p><a class="btn btn-info" href="#" role="button">Register &raquo;</a></p>
+        <p><%= link_to "Register", new_food_path, class: "btn btn-info btn" %></p>
       </div>
       <div class="col-md-4">
         <h2>整理する</h2>
         <p>You can delete the registered ingredients and change the number. Let's organize what we used here.</p>
-        <p><a class="btn btn-info" href="#" role="button">Organize &raquo;</a></p>
+        <p><%= link_to "Organaize", '#', class: "btn btn-info btn" %></p>
       </div>
       <div class="col-md-4">
         <h2>買い物リストを作る</h2>
         <p>You can create a shopping list. Prevent forgetting to buy or overbuying.</p>
-        <p><a class="btn btn-info" href="#" role="button">Create &raquo</a></p>
+        <p><%= link_to "Create", '#', class: "btn btn-info btn" %></p>
       </div>
     </div>
 

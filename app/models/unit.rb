@@ -1,4 +1,4 @@
-class Unit < ApplicationRecord
+class Unit < ActiveHash::Base
   self.data = [
     { id: 1, name: '--' },
     { id: 2, name: '個' },
@@ -12,5 +12,5 @@ class Unit < ApplicationRecord
   ]
 
   include ActiveHash::Associations
-  has_many :foodstuffs
+  has_many :foods
 end
