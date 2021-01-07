@@ -1,0 +1,35 @@
+// Place all the styles related to the foods controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.btn {
+  margin: 10px;
+}
+
+h1 {
+  margin: 20px;
+}
+
+.food_form {
+  margin: 10px 40px;
+}
+
+.navber {
+  display: flex;
+}
+
+.contents {
+  height: 50vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.success {
+  width: 50vw;
+  border: double 5px #17a2b8;
+  border-radius: 8px;
+}
+
+h2 {
+  margin: 10px;
+}

@@ -1,0 +1,18 @@
+<%= form_with model: food, local: true, class: "food_form" do |f| %>
+<div class="field">
+  <%= f.label :食材 %><br>
+  <%= f.text_field :name %>
+</div>
+<div class="field">
+  <%= f.label :数量 %><br>
+  <%= f.text_field :amount %>
+  <%= f.collection_select(:unit_id, Unit.all, :id, :name, {}, {class:"unit-select"}) %>
+</div>
+<div class="field">
+  <%= f.label :期限 %><br>
+  <%= f.date_field :limit %>
+</div>
+<div class="actions">
+  <%= f.submit "保存", class: "btn btn-info" %>
+</div>
+<% end %>
