@@ -35,7 +35,7 @@ RSpec.describe Food, type: :model do
       it 'unit_idが1だと登録できない' do
         @food.unit_id = 1
         @food.valid?
-        expect(@food.errors.full_messages).to include("Unit must be other than 1")
+        expect(@food.errors.full_messages).to include("Unit select")
       end
     end
   end
